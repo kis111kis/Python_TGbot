@@ -24,7 +24,7 @@ def repeat(coro, loop):
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.call_later(5, repeat, send_messages, loop)
-    db_session.global_init("data_base.db")
+    db_session.global_init("data/data_base.db")
 
     session = db_session.create_session()
     # for i in session.query(User).all():
